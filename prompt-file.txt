@@ -1,0 +1,1 @@
+Activate and follow the installed makefun-world-news-image skill. Start Phase 1 only for the Make.fun bounty: https://make.fun/bounty/news-image-20261125. Account: @onchain. Then proceed through Phase 2 (news research) and build the deterministic offline renderer entry.

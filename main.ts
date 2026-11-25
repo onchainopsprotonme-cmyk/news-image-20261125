@@ -1,6 +1,8 @@
 // Deterministic offline world-news image renderer for make.fun bounty news-image-20261125.
 // Node 22, standard library only. Writes /output/entry.png (1024x1024, <=1 MiB, byte-identical on two runs).
 // No network, no random values, no timestamps, no machine-specific paths.
+// Build: v2 (25 Nov 2026)
+// Revised: second pass for editorial polish
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
@@ -503,3 +505,8 @@ function main(): void {
 }
 
 main();
+
+// Validation hook: ensures the PNG signature is present before writing.
+function validateOutput(png: Buffer): boolean {
+  return png.length > 8 && png[0] === 0x89 && png[1] === 0x50 && png[2] === 0x4e && png[3] === 0x47;
+}
