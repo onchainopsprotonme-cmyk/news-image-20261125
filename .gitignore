@@ -1,0 +1,6 @@
+makefun-keypair.json
+.env
+*.log
+out/
+out2/
+node_modules/
